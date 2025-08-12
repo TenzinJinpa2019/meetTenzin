@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,6 +26,7 @@
         <a href="#research">Research</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
     </div>
   </header>
 
@@ -67,12 +68,13 @@
       </article>
 
       <article class="proj">
-        <h3>EffectiveAI — Ambulance Dispatch Optimization (RL)</h3>
-        <p><strong>Goal:</strong> Reduce response time in a grid city by optimal stationing/relocation of ambulances based on historical call patterns.</p>
-        <p><strong>Approach:</strong> Built a stochastic simulator; engineered state representation (spatiotemporal call probabilities, unit locations, travel times); evaluated policies (greedy baselines vs. RL); incorporated relocation penalties and service-level constraints.</p>
-        <p><strong>Impact:</strong> Demonstrated lower average response times and more balanced coverage during peak periods.</p>
-        <p><strong>Stack:</strong> Python, NumPy, RL libraries, discrete-event simulation, Jupyter, Azure DevOps for runs.</p>
-        <p><strong>Role:</strong> PI/R&amp;D lead — environment design, reward shaping, policy evaluation, and reporting to partners.</p>
+        <h3>EffectiveAI — Ambulance Dispatch Optimization (Deep Learning)</h3>
+        <p><strong>Goal:</strong> Reduce emergency response time and minimize ambulance standby in a grid-based city.</p>
+        <p><strong>Data:</strong> Ten years of EMS records from Lambton City, including call timestamps, locations, unit status, travel times, and outcomes.</p>
+        <p><strong>Approach:</strong> Trained deep learning models on spatiotemporal demand patterns to recommend optimal ambulance positioning and relocation decisions under varying call intensities. Built a simulator to compare model-driven strategies with historical behavior.</p>
+        <p><strong>Results:</strong> Reduced average response time and decreased total standby time compared with the city’s 2022 baseline.</p>
+        <p><strong>Stack:</strong> Python, PyTorch, Pandas, NumPy; discrete-event simulation for evaluation; Azure DevOps for experiment tracking.</p>
+        <p><strong>Role:</strong> PI/R&amp;D lead — data strategy, model design, evaluation methodology, and reporting to municipal partners.</p>
       </article>
 
       <article class="proj">
