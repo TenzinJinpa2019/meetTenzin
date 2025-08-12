@@ -19,7 +19,7 @@
       </div>
       <nav class="nav">
         <a href="#profile">Profile</a>
-        <a href="#projects">AI Projects</a>
+        <a href="#projects">Selected AI Projects 2022–2025</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
@@ -36,11 +36,11 @@
         <div>
           <h2>Profile</h2>
           <p class="lead-text">
-            I help organizations turn AI research into reliable, production-ready software. I’ve partnered with 30+ SMEs and public-sector teams to secure funding, build end-to-end data/ML systems, and deliver measurable business outcomes. My focus is practical AI: clean data pipelines, well-evaluated models, and deployments that scale.
+            I help organizations turn AI research into reliable, production-ready software. I’ve partnered with 30+ SMEs and public-sector teams to secure funding, build end-to-end data/ML systems, and deliver measurable outcomes. My focus is practical AI: clean data pipelines, well-evaluated models, and deployments that scale.
           </p>
           <ul class="key-points">
-            <li><strong>Funding &amp; Commercialization:</strong> IRAP, MITACS, NSERC, TAC — concept to funded project to product.</li>
-            <li><strong>Delivery:</strong> Data engineering, ML/DL, evaluation, and MLOps/DevOps on Azure &amp; AWS.</li>
+            <li><strong>Funding & Commercialization:</strong> IRAP, MITACS, NSERC, TAC — concept → funded project → product.</li>
+            <li><strong>Delivery:</strong> Data engineering, ML/DL, evaluation, and MLOps/DevOps on Azure & AWS.</li>
             <li><strong>Leadership:</strong> Mentored 90+ researchers and engineers across 30+ applied projects.</li>
           </ul>
         </div>
@@ -59,47 +59,51 @@
       <h2>Selected AI Projects 2022–2025</h2>
 
       <article class="proj">
-        <h3>Griffith Foods — Shelf-Life &amp; Sensory Prediction</h3>
-        <p><strong>Goal:</strong> Build ML models to predict sensory attributes and shelf-life to speed up formulation and reduce wet-lab cycles.</p>
-        <p><strong>Approach:</strong> Curated multi-source R&amp;D data; feature engineering for ingredient interactions; trained regression/classification models; added uncertainty estimates for R&amp;D decision support; designed an internal tool for experiment planning.</p>
-        <p><strong>Impact:</strong> Shortened iteration time for new formulations and provided explainable drivers of quality change over time.</p>
-        <p><strong>Stack:</strong> Python, scikit-learn, PyTorch, Pandas, Azure (storage + CI/CD).</p>
-        <p><strong>Role:</strong> Project lead — problem framing, data strategy, modeling, and deployment plan with R&amp;D stakeholders.</p>
+        <h3>Griffith Foods — Shelf-Life & Sensory Prediction</h3>
+        <p><strong>Goal:</strong> Predict sensory attributes and shelf-life to shorten formulation cycles and reduce lab workload.</p>
+        <p><strong>Data:</strong> Multi-year R&amp;D datasets combining formulations, process variables, storage conditions, and expert sensory panels.</p>
+        <p><strong>Approach:</strong> Built a unified data schema; engineered interaction features for ingredient/process effects; trained regression/classification models with uncertainty quantification; designed an internal planning tool that surfaces top predictors and “what-if” scenarios for new trials.</p>
+        <p><strong>Results:</strong> Fewer experimental iterations for target profiles; improved explainability for quality drivers across time.</p>
+        <p><strong>Stack:</strong> Python, scikit-learn, PyTorch, Pandas, SHAP, Azure (storage, CI/CD).</p>
+        <p><strong>Role:</strong> Project lead — problem framing, data strategy, modeling, and deployment roadmap with R&amp;D stakeholders.</p>
       </article>
 
       <article class="proj">
         <h3>EffectiveAI — Ambulance Dispatch Optimization (Deep Learning)</h3>
-        <p><strong>Goal:</strong> Reduce emergency response time and minimize ambulance standby in a grid-based service area.</p>
-        <p><strong>Data:</strong> Ten years of EMS records from Lambton County, including call timestamps, geolocation, unit status, travel times, and outcomes.</p>
-        <p><strong>Approach:</strong> Trained deep learning models on spatiotemporal demand patterns to recommend optimal ambulance positioning and relocation decisions under varying call intensities. Built a simulator to compare model-driven strategies with historical behavior.</p>
-        <p><strong>Results:</strong> Reduced average response time and decreased total standby time compared with the city’s 2022 baseline.</p>
+        <p><strong>Goal:</strong> Reduce response times and minimize ambulance standby for a grid-based service area.</p>
+        <p><strong>Data:</strong> Ten years of EMS records from Lambton County: call timestamps, geolocation, unit status, travel times, and outcomes.</p>
+        <p><strong>Approach:</strong> Trained spatiotemporal deep-learning models on historical demand and coverage patterns to recommend optimal unit positioning and relocation decisions under varying call intensities. Built a realistic simulator to benchmark model-guided strategies against historical behavior.</p>
+        <p><strong>Results:</strong> Lower average response time and reduced aggregate standby compared with the 2022 operational baseline.</p>
         <p><strong>Stack:</strong> Python, PyTorch, Pandas, NumPy; discrete-event simulation for evaluation; Azure DevOps for experiment tracking.</p>
         <p><strong>Role:</strong> PI/R&amp;D lead — data strategy, model design, evaluation methodology, and reporting to municipal partners.</p>
       </article>
 
       <article class="proj">
         <h3>LLM-Based Burnout Detection</h3>
-        <p><strong>Goal:</strong> Identify clinician burnout signals and provide personalized wellness recommendations.</p>
-        <p><strong>Approach:</strong> Fine-tuned LLMs with domain prompts; privacy-aware text pipelines; human-in-the-loop review; evaluation against clinician-labeled sets.</p>
-        <p><strong>Impact:</strong> Early risk flagging and targeted interventions; foundation for broader mental-health analytics.</p>
-        <p><strong>Stack:</strong> Python, Hugging Face, transformers, FastAPI, Docker.</p>
+        <p><strong>Goal:</strong> Identify clinician burnout signals and generate personalized wellness recommendations.</p>
+        <p><strong>Data:</strong> De-identified clinician text inputs and surveys with expert annotations.</p>
+        <p><strong>Approach:</strong> Domain-tuned LLM prompts and adapters; privacy-aware text pipelines; human-in-the-loop review; threshold calibration against clinician-labeled sets.</p>
+        <p><strong>Results:</strong> Earlier risk flagging and targeted plans; foundation for broader mental-health analytics.</p>
+        <p><strong>Stack:</strong> Python, Hugging Face Transformers, FastAPI, Docker.</p>
         <p><strong>Role:</strong> Lead — modeling strategy, evaluation design, and integration planning.</p>
       </article>
 
       <article class="proj">
         <h3>Glucose Level Forecasting</h3>
         <p><strong>Goal:</strong> Forecast near-term glucose to support proactive management.</p>
-        <p><strong>Approach:</strong> Trained temporal DL models on 3k+ patients; handled cold-start; added drift monitoring; calibrated predictions.</p>
-        <p><strong>Impact:</strong> Improved prediction stability; groundwork for decision support on alerts and dosing.</p>
-        <p><strong>Stack:</strong> PyTorch, Pandas, scikit-learn, MLflow.</p>
-        <p><strong>Role:</strong> Lead — data pipeline, modeling, and validation protocols.</p>
+        <p><strong>Data:</strong> Longitudinal CGM datasets for 3k+ patients with medications, meals, and activity features where available.</p>
+        <p><strong>Approach:</strong> Temporal DL with feature lags and time-of-day effects; cold-start handling; drift monitoring and calibration.</p>
+        <p><strong>Results:</strong> More stable predictions across cohorts; groundwork for alerting and dose-support logic.</p>
+        <p><strong>Stack:</strong> PyTorch, scikit-learn, MLflow.</p>
+        <p><strong>Role:</strong> Lead — pipeline design, modeling, and validation protocols.</p>
       </article>
 
       <article class="proj">
         <h3>Non-Invasive BP from ECG</h3>
-        <p><strong>Goal:</strong> Estimate blood pressure from ECG to enable low-cost screening.</p>
-        <p><strong>Approach:</strong> Signal processing + DL features; model achieved &lt; 6.5 MAE on held-out validation; prepared lightweight runtime for edge devices.</p>
-        <p><strong>Impact:</strong> Potentially reduces measurement friction in community screenings.</p>
+        <p><strong>Goal:</strong> Estimate blood pressure from ECG for low-cost community screening.</p>
+        <p><strong>Data:</strong> 5k+ patient recordings with synchronized ECG/BP measurements.</p>
+        <p><strong>Approach:</strong> Signal processing with morphology features + DL embeddings; model selection via nested CV; export to lightweight runtime.</p>
+        <p><strong>Results:</strong> &lt; 6.5 MAE on held-out validation; path to edge deployment.</p>
         <p><strong>Stack:</strong> Python, PyTorch, SciPy, ONNX/TFLite (prototype).</p>
         <p><strong>Role:</strong> Modeling lead — feature design, evaluation, and deployment pathway.</p>
       </article>
@@ -107,19 +111,21 @@
       <article class="proj">
         <h3>Beverage Flavor Compatibility (PoC)</h3>
         <p><strong>Goal:</strong> Predict flavor compatibility for fermented beverages to guide R&amp;D trials.</p>
-        <p><strong>Approach:</strong> Engineered sensory and process features; trained supervised models; iterative validation with SMEs.</p>
-        <p><strong>Impact:</strong> Reduced number of experimental batches needed for acceptable profiles.</p>
-        <p><strong>Stack:</strong> Python, scikit-learn, SHAP for explainability.</p>
+        <p><strong>Data:</strong> Sensory ratings, fermentation parameters, and ingredient metadata curated with SMEs.</p>
+        <p><strong>Approach:</strong> Supervised learning with engineered interaction terms; iterative SME validation; explainability to inform next experiments.</p>
+        <p><strong>Results:</strong> Fewer experimental batches to reach acceptable profiles; clearer drivers of compatibility.</p>
+        <p><strong>Stack:</strong> Python, scikit-learn, SHAP.</p>
         <p><strong>Role:</strong> Project lead — problem definition, data design, model selection, insights.</p>
       </article>
 
       <article class="proj">
         <h3>Retail Effort Estimation</h3>
         <p><strong>Goal:</strong> Forecast merchandising effort to plan staffing and logistics.</p>
-        <p><strong>Approach:</strong> Trained DT/RF/RNN ensembles on 1M+ rows; feature engineering for seasonality and store archetypes; scenario analysis.</p>
-        <p><strong>Impact:</strong> Better labor allocation and cost predictability during promotions and resets.</p>
+        <p><strong>Data:</strong> 1M+ rows across stores, assortments, seasonality, and promotion calendars.</p>
+        <p><strong>Approach:</strong> DT/RF/RNN ensembles; engineered store archetypes and seasonal effects; scenario analysis for planners.</p>
+        <p><strong>Results:</strong> Better labor allocation and cost predictability during promotions/resets.</p>
         <p><strong>Stack:</strong> Python, scikit-learn, PyTorch, Airflow.</p>
-        <p><strong>Role:</strong> Tech lead — modeling and MLOps patterns for repeatability.</p>
+        <p><strong>Role:</strong> Tech lead — modeling patterns and MLOps for repeatability.</p>
       </article>
 
       <p class="footnote">Detailed documentation, metrics, and references available on request.</p>
@@ -131,7 +137,7 @@
       <article class="role">
         <header class="role-head">
           <h3>Research &amp; Development Lead (Software &amp; AI)</h3>
-          <div class="meta">WIMTACH (Technology Access Centre), Centennial College — Toronto • Jan 2022 – Present</div>
+          <div class="meta">WIMTACH (Technology Access Centre), Centennial College — Toronto</div>
         </header>
         <ul class="bullets">
           <li>Owned funding/commercialization strategy (IRAP, MITACS, NSERC, TAC); facilitated &gt; CAD 1.5M combined industry + public funding.</li>
@@ -144,52 +150,43 @@
       <article class="role">
         <header class="role-head">
           <h3>Professor (Part-Time)</h3>
-          <div class="meta">School of Engineering Technology &amp; Applied Science — Centennial College • Jan 2022 – Present</div>
+          <div class="meta">School of Engineering Technology &amp; Applied Science — Centennial College</div>
         </header>
         <ul class="bullets">
-          <li>Taught AI Ethics, AI for Software Developers, NLP, Recommender Systems, Unsupervised Learning, Requirements Engineering, and Databases.</li>
-          <li>Designed applied curricula aligned to industry; mentored students in research, industry collaborations, and innovation.</li>
+          <li>Designed and delivered applied courses in AI Ethics, NLP, Recommender Systems, and related topics aligned to industry needs.</li>
+          <li>Mentored students in industry collaborations, applied research, and innovation practices.</li>
         </ul>
       </article>
 
       <article class="role">
         <header class="role-head">
           <h3>Graduate Research Assistant</h3>
-          <div class="meta">The University of British Columbia — Sep 2019 – Dec 2021</div>
+          <div class="meta">The University of British Columbia</div>
         </header>
         <ul class="bullets">
-          <li>Built deep-learning methods for program comprehension and automated comment generation; published at AAAI-36.</li>
+          <li>Researched and developed advanced neural code representation techniques to improve program comprehension and enable automated comment generation, resulting in a peer-reviewed publication at AAAI-36.</li>
         </ul>
       </article>
 
       <article class="role">
         <header class="role-head">
           <h3>Head of Computer Application Department</h3>
-          <div class="meta">The Dalai Lama Institute for Higher Education, Bangalore University — Sep 2016 – Jan 2018</div>
+          <div class="meta">The Dalai Lama Institute for Higher Education, Bangalore University</div>
         </header>
         <ul class="bullets">
           <li>Led curriculum modernization and research partnerships across software engineering and AI.</li>
-          <li>Co-organized a national conference on technology &amp; Tibetan studies <strong>(June 2017)</strong>; advised the follow-up edition <strong>(July 2019)</strong>.</li>
-        </ul>
-      </article>
-
-      <article class="role">
-        <header class="role-head">
-          <h3>Lecturer</h3>
-          <div class="meta">The Dalai Lama Institute for Higher Education, Bangalore University — Sep 2016 – Jan 2018</div>
-        </header>
-        <ul class="bullets">
-          <li>Taught algorithms, data structures, discrete math, C, and Java; supervised 12 capstones; co-organized national conferences.</li>
+          <li>Co-organized the <strong>National Conference on Technology and Tibetan Studies</strong> with Bangalore University, and advised the follow-up <strong>International Symposium on Technology and Tibetan Studies</strong> hosted by the Dalai Lama Institute.</li>
         </ul>
       </article>
 
       <article class="role">
         <header class="role-head">
           <h3>Senior Application Developer</h3>
-          <div class="meta">Monlam Tibetan IT Research Center — Jan 2015 – Aug 2016</div>
+          <div class="meta">Monlam Tibetan IT Research Center</div>
         </header>
         <ul class="bullets">
-          <li>Shipped cross-platform apps (iOS/Android/ASP.NET); launched an iOS Tibetan dictionary surpassing 100k downloads.</li>
+          <li>Led end-to-end design, development, and deployment of cross-platform applications (iOS, Android, ASP.NET).</li>
+          <li>Created the flagship <strong>Monlam Tibetan Dictionary</strong> for iOS, surpassing 100,000 downloads globally; implemented advanced search, robust offline access, and analytics-driven feature improvements based on user behavior.</li>
         </ul>
       </article>
     </section>
@@ -215,17 +212,17 @@
       <ul class="timeline">
         <li>
           <div class="degree">M.Sc., Computer Science (Thesis-Based)</div>
-          <div class="org">The University of British Columbia — Sept 2019 – Oct 2021</div>
+          <div class="org">The University of British Columbia</div>
           <div class="note">Code representation learning with deep models.</div>
         </li>
         <li>
           <div class="degree">M.Tech., Information Technology</div>
-          <div class="org">GGS Indraprastha University — Aug 2013 – Aug 2015</div>
+          <div class="org">GGS Indraprastha University</div>
           <div class="note">Energy-efficient wireless sensor network protocols.</div>
         </li>
         <li>
           <div class="degree">B.Tech., Information Technology</div>
-          <div class="org">GGS Indraprastha University — Aug 2009 – Jul 2013</div>
+          <div class="org">GGS Indraprastha University</div>
           <div class="note">Game development in Java.</div>
         </li>
       </ul>
@@ -234,11 +231,9 @@
     <section id="research" class="card">
       <h2>Research &amp; Publications</h2>
       <ul class="bullets">
-        <li>AAAI-36: Code Representation Learning with Prüfer Sequences (2022)</li>
-        <li>IATS 2022: Digitization of Tibetan Text — Deep Learning &amp; Security Implications</li>
-        <li>UBC Thesis (2021): <a href="https://open.library.ubc.ca/collections/ubctheses/24/items/1.0402946" target="_blank" rel="noopener">Code representation learning with Prüfer sequences</a></li>
-        <li>Springer AISC (2016): M-SEP: A Variant of SEP for WSN</li>
-        <li>IJCSCN (2015): Energy Efficient Protocols (MODLEACH, SEP, DEEC)</li>
+        <li>AAAI-36: Code Representation Learning with Prüfer Sequences</li>
+        <li>IATS: Digitization of Tibetan Text — Deep Learning &amp; Security Implications</li>
+        <li>UBC Thesis: <a href="https://open.library.ubc.ca/collections/ubctheses/24/items/1.0402946" target="_blank" rel="noopener">Code representation learning with Prüfer sequences</a></li>
       </ul>
     </section>
 
@@ -259,23 +254,21 @@
     </div>
   </footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Tenzin Jinpa",
-    "jobTitle": "AI & Software R&D Leader",
-    "telephone": "437-299-7829",
-    "email": "mailto:tenzinjinpa2024@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Toronto",
-      "addressCountry": "Canada"
-    },
-    "url": "https://tenzinjinpa2019.github.io/meetTenzin/",
-    "sameAs": ["https://ca.linkedin.com/in/tenzin-jinpa-6a858979"]
-  }
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') { root.classList.remove('light'); root.classList.add('dark'); btn.textContent = '🌙'; }
+      else { root.classList.remove('dark'); root.classList.add('light'); btn.textContent = '☀️'; }
+      btn.addEventListener('click', () => {
+        const isDark = root.classList.toggle('dark');
+        root.classList.toggle('light', !isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        btn.textContent = isDark ? '🌙' : '☀️';
+      });
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+    })();
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
