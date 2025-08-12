@@ -1,13 +1,4 @@
-# Rebuild index.html to (1) focus on Projects with detailed write-ups,
-# (2) add the two new projects (EffectiveAI ambulance optimization and Griffith Foods AI),
-# (3) drop Awards, and (4) keep the white professional theme and prior structure otherwise.
-
-import os, zipfile
-
-base = "/mnt/data/tenzin_resume_white_pro_v2"
-os.makedirs(base, exist_ok=True)
-
-index_html = """<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -16,7 +7,7 @@ index_html = """<!doctype html>
   <meta name="description" content="AI and software R&D leader with a track record of funding, productization, and measurable impact for SMEs and partners." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -44,4 +35,233 @@ index_html = """<!doctype html>
         <div>
           <h2>Profile</h2>
           <p class="lead-text">
-            I help organizations
+            I help organizations turn AI research into reliable, production-ready software. I’ve partnered with 30+ SMEs and public-sector teams to secure funding, build end-to-end data/ML systems, and deliver measurable business outcomes. My focus is practical AI: clean data pipelines, well-evaluated models, and deployments that scale.
+          </p>
+          <ul class="key-points">
+            <li><strong>Funding &amp; Commercialization:</strong> IRAP, MITACS, NSERC, TAC — concept to funded project to product.</li>
+            <li><strong>Delivery:</strong> Data engineering, ML/DL, evaluation, and MLOps/DevOps on Azure &amp; AWS.</li>
+            <li><strong>Leadership:</strong> Mentored 90+ researchers and engineers across 30+ applied projects.</li>
+          </ul>
+        </div>
+        <aside class="contact">
+          <ul class="plain">
+            <li>📍 Toronto, Canada</li>
+            <li>✉️ <a href="mailto:tenzinjinpa2024@gmail.com">tenzinjinpa2024@gmail.com</a></li>
+            <li>📞 437-299-7829</li>
+            <li>🔗 <a href="https://ca.linkedin.com/in/tenzin-jinpa-6a858979" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Selected AI Projects</h2>
+
+      <article class="proj">
+        <h3>Griffith Foods — Shelf-Life &amp; Sensory Prediction</h3>
+        <p><strong>Goal:</strong> Build ML models to predict sensory attributes and shelf-life to speed up formulation and reduce wet-lab cycles.</p>
+        <p><strong>Approach:</strong> Curated multi-source R&amp;D data; feature engineering for ingredient interactions; trained regression/classification models; added uncertainty estimates for R&amp;D decision support; designed an internal tool for experiment planning.</p>
+        <p><strong>Impact:</strong> Shortened iteration time for new formulations and provided explainable drivers of quality change over time.</p>
+        <p><strong>Stack:</strong> Python, scikit-learn, PyTorch, Pandas, Azure (storage + CI/CD).</p>
+        <p><strong>Role:</strong> Project lead — problem framing, data strategy, modeling, and deployment plan with R&amp;D stakeholders.</p>
+      </article>
+
+      <article class="proj">
+        <h3>EffectiveAI — Ambulance Dispatch Optimization (RL)</h3>
+        <p><strong>Goal:</strong> Reduce response time in a grid city by optimal stationing/relocation of ambulances based on historical call patterns.</p>
+        <p><strong>Approach:</strong> Built a stochastic simulator; engineered state representation (spatiotemporal call probabilities, unit locations, travel times); evaluated policies (greedy baselines vs. RL); incorporated relocation penalties and service-level constraints.</p>
+        <p><strong>Impact:</strong> Demonstrated lower average response times and more balanced coverage during peak periods.</p>
+        <p><strong>Stack:</strong> Python, NumPy, RL libraries, discrete-event simulation, Jupyter, Azure DevOps for runs.</p>
+        <p><strong>Role:</strong> PI/R&amp;D lead — environment design, reward shaping, policy evaluation, and reporting to partners.</p>
+      </article>
+
+      <article class="proj">
+        <h3>LLM-Based Burnout Detection</h3>
+        <p><strong>Goal:</strong> Identify clinician burnout signals and provide personalized wellness recommendations.</p>
+        <p><strong>Approach:</strong> Fine-tuned LLMs with domain prompts; privacy-aware text pipelines; human-in-the-loop review; evaluation against clinician-labeled sets.</p>
+        <p><strong>Impact:</strong> Early risk flagging and targeted interventions; foundation for broader mental-health analytics.</p>
+        <p><strong>Stack:</strong> Python, Hugging Face, transformers, FastAPI, Docker.</p>
+        <p><strong>Role:</strong> Lead — modeling strategy, evaluation design, and integration planning.</p>
+      </article>
+
+      <article class="proj">
+        <h3>Glucose Level Forecasting</h3>
+        <p><strong>Goal:</strong> Forecast near-term glucose to support proactive management.</p>
+        <p><strong>Approach:</strong> Trained temporal DL models on 3k+ patients; handled cold-start; added drift monitoring; calibrated predictions.</p>
+        <p><strong>Impact:</strong> Improved prediction stability; groundwork for decision support on alerts and dosing.</p>
+        <p><strong>Stack:</strong> PyTorch, Pandas, scikit-learn, MLflow.</p>
+        <p><strong>Role:</strong> Lead — data pipeline, modeling, and validation protocols.</p>
+      </article>
+
+      <article class="proj">
+        <h3>Non-Invasive BP from ECG</h3>
+        <p><strong>Goal:</strong> Estimate blood pressure from ECG to enable low-cost screening.</p>
+        <p><strong>Approach:</strong> Signal processing + DL features; model achieved &lt; 6.5 MAE on held-out validation; prepared lightweight runtime for edge devices.</p>
+        <p><strong>Impact:</strong> Potentially reduces measurement friction in community screenings.</p>
+        <p><strong>Stack:</strong> Python, PyTorch, SciPy, ONNX/TFLite (prototype).</p>
+        <p><strong>Role:</strong> Modeling lead — feature design, evaluation, and deployment pathway.</p>
+      </article>
+
+      <article class="proj">
+        <h3>Beverage Flavor Compatibility (PoC)</h3>
+        <p><strong>Goal:</strong> Predict flavor compatibility for fermented beverages to guide R&amp;D trials.</p>
+        <p><strong>Approach:</strong> Engineered sensory and process features; trained supervised models; iterative validation with SMEs.</p>
+        <p><strong>Impact:</strong> Reduced number of experimental batches needed for acceptable profiles.</p>
+        <p><strong>Stack:</strong> Python, scikit-learn, SHAP for explainability.</p>
+        <p><strong>Role:</strong> Project lead — problem definition, data design, model selection, insights.</p>
+      </article>
+
+      <article class="proj">
+        <h3>Retail Effort Estimation</h3>
+        <p><strong>Goal:</strong> Forecast merchandising effort to plan staffing and logistics.</p>
+        <p><strong>Approach:</strong> Trained DT/RF/RNN ensembles on 1M+ rows; feature engineering for seasonality and store archetypes; scenario analysis.</p>
+        <p><strong>Impact:</strong> Better labor allocation and cost predictability during promotions and resets.</p>
+        <p><strong>Stack:</strong> Python, scikit-learn, PyTorch, Airflow.</p>
+        <p><strong>Role:</strong> Tech lead — modeling and MLOps patterns for repeatability.</p>
+      </article>
+
+      <p class="footnote">Detailed documentation, metrics, and references available on request.</p>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+
+      <article class="role">
+        <header class="role-head">
+          <h3>Research &amp; Development Lead (Software &amp; AI)</h3>
+          <div class="meta">WIMTACH (Technology Access Centre), Centennial College — Toronto • Jan 2022 – Present</div>
+        </header>
+        <ul class="bullets">
+          <li>Owned funding/commercialization strategy (IRAP, MITACS, NSERC, TAC); facilitated &gt; CAD 1.5M combined industry + public funding.</li>
+          <li>Delivered 30+ projects from discovery to launch; established metrics, model evaluation protocols, and secure cloud deployments.</li>
+          <li>Directed a CAD 360k CCSIF initiative for an accessible online learning platform in healthcare and education.</li>
+          <li>Instituted Agile delivery with reproducible pipelines and CI/CD; accelerated partner time-to-value.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <header class="role-head">
+          <h3>Graduate Research Assistant</h3>
+          <div class="meta">The University of British Columbia — Sep 2019 – Dec 2021</div>
+        </header>
+        <ul class="bullets">
+          <li>Built deep-learning methods for program comprehension and automated comment generation; published at AAAI-36.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <header class="role-head">
+          <h3>Head of Computer Application Department</h3>
+          <div class="meta">The Dalai Lama Institute for Higher Education, Bangalore University — Sep 2016 – Jan 2018</div>
+        </header>
+        <ul class="bullets">
+          <li>Led curriculum modernization and research partnerships across software engineering and AI.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <header class="role-head">
+          <h3>Lecturer</h3>
+          <div class="meta">The Dalai Lama Institute for Higher Education, Bangalore University — Sep 2016 – Jan 2018</div>
+        </header>
+        <ul class="bullets">
+          <li>Taught algorithms, data structures, discrete math, C, and Java; supervised 12 capstones; co-organized national conferences.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <header class="role-head">
+          <h3>Senior Application Developer</h3>
+          <div class="meta">Monlam Tibetan IT Research Center — Jan 2015 – Aug 2016</div>
+        </header>
+        <ul class="bullets">
+          <li>Shipped cross-platform apps (iOS/Android/ASP.NET); launched an iOS Tibetan dictionary surpassing 100k downloads.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="grid two">
+        <ul class="bullets">
+          <li><strong>Languages:</strong> Python, Java, C#, C</li>
+          <li><strong>ML/AI:</strong> LLMs, NLP, Multimodal, Deep Learning, Generative AI</li>
+          <li><strong>Frameworks:</strong> PyTorch, TensorFlow, scikit-learn, Hugging Face, LangChain, spaCy</li>
+        </ul>
+        <ul class="bullets">
+          <li><strong>Cloud:</strong> Azure, AWS (Azure ML, SageMaker Studio)</li>
+          <li><strong>Ops:</strong> DevOps/MLOps/CI-CD (Azure DevOps, Jenkins)</li>
+          <li><strong>Data:</strong> PostgreSQL, MySQL, NoSQL, Vector DBs; Spark, Databricks, Kafka, Kinesis, Redshift, Athena</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <div class="degree">M.Sc., Computer Science (Thesis-Based)</div>
+          <div class="org">The University of British Columbia — Sept 2019 – Oct 2021</div>
+          <div class="note">Code representation learning with deep models.</div>
+        </li>
+        <li>
+          <div class="degree">M.Tech., Information Technology</div>
+          <div class="org">GGS Indraprastha University — Aug 2013 – Aug 2015</div>
+          <div class="note">Energy-efficient wireless sensor network protocols.</div>
+        </li>
+        <li>
+          <div class="degree">B.Tech., Information Technology</div>
+          <div class="org">GGS Indraprastha University — Aug 2009 – Jul 2013</div>
+          <div class="note">Game development in Java.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="research" class="card">
+      <h2>Research &amp; Publications</h2>
+      <ul class="bullets">
+        <li>AAAI-36: Code Representation Learning with Prüfer Sequences (2022)</li>
+        <li>IATS 2022: Digitization of Tibetan Text — Deep Learning &amp; Security Implications</li>
+        <li>UBC Thesis (2021): <a href="https://open.library.ubc.ca/collections/ubctheses/24/items/1.0402946" target="_blank" rel="noopener">Code representation learning with Prüfer sequences</a></li>
+        <li>Springer AISC (2016): M-SEP: A Variant of SEP for WSN</li>
+        <li>IJCSCN (2015): Energy Efficient Protocols (MODLEACH, SEP, DEEC)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Open to collaborations with SMEs, startups, and public-sector teams building responsible AI systems.</p>
+      <ul class="plain">
+        <li>✉️ <a href="mailto:tenzinjinpa2024@gmail.com">tenzinjinpa2024@gmail.com</a></li>
+        <li>📞 437-299-7829</li>
+        <li>🔗 <a href="https://ca.linkedin.com/in/tenzin-jinpa-6a858979" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Tenzin Jinpa • AI &amp; Software R&amp;D • Hosted on GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tenzin Jinpa",
+    "jobTitle": "AI & Software R&D Leader",
+    "telephone": "437-299-7829",
+    "email": "mailto:tenzinjinpa2024@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Toronto",
+      "addressCountry": "Canada"
+    },
+    "url": "https://tenzinjinpa2019.github.io/meetTenzin/",
+    "sameAs": ["https://ca.linkedin.com/in/tenzin-jinpa-6a858979"]
+  }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
