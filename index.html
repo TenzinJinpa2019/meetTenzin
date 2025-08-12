@@ -234,14 +234,19 @@
       </article>
 
       <article class="role">
-        <header class="role-head">
-          <h3>Graduate Research Assistant</h3>
-          <div class="meta">The University of British Columbia • Sep 2019 – Dec 2021</div>
-        </header>
-        <ul class="bullets">
-          <li>Researched advanced neural code representation to improve program comprehension and enable automated comment generation; published at AAAI-36.</li>
-        </ul>
-      </article>
+  <header class="role-head">
+    <h3>Graduate Research Assistant</h3>
+    <div class="meta">The University of British Columbia • Sep 2019 – Dec 2021</div>
+  </header>
+  <ul class="bullets">
+    <li>Conducted cutting-edge research on <strong>neural code representation learning</strong> to enhance program comprehension and support automated comment generation for software engineering tasks.</li>
+    <li>Designed novel deep learning architectures that model program syntax and semantics via Prüfer sequence encodings, enabling more compact and information-rich code embeddings.</li>
+    <li>Curated and preprocessed large-scale multilingual code corpora from public repositories to train and evaluate models, ensuring robust generalization across programming languages.</li>
+    <li>Performed extensive ablation studies and benchmarking against state-of-the-art baselines, demonstrating significant improvements in code summarization and comprehension tasks.</li>
+    <li>Published findings at <strong>AAAI-36</strong>, highlighting the practical applications of learned code embeddings in software documentation, maintenance, and intelligent developer tools.</li>
+  </ul>
+</article>
+
 
       <article class="role">
         <header class="role-head">
@@ -266,10 +271,67 @@
       </article>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="card">
-      <h2>Skills</h2>
-      <div class="grid two">
-        <ul class="bullets">
-          <li><strong>Languages:</strong> Python, Java, C#, C</li>
-          <li><strong>ML/AI:</stron
+   <section id="skills" class="card">
+  <h2>Technical Skills</h2>
+  <div class="grid two">
+    <ul>
+      <li><strong>AI / Machine Learning:</strong> Deep Learning (CNNs, RNNs, Transformers), LLMs (Prompt Engineering, Fine-Tuning), NLP (Text Classification, Named Entity Recognition, Summarization), Multimodal Models, Generative AI, Recommendation Systems, Time-Series Forecasting.</li>
+      <li><strong>AI Frameworks:</strong> PyTorch, TensorFlow, Hugging Face Transformers, LangChain, spaCy, scikit-learn, OpenAI API, FastAPI for AI deployments.</li>
+      <li><strong>Data Engineering:</strong> DataOps pipelines, Feature Engineering, ETL, Data Cleaning/Preprocessing, Vector Databases (Pinecone, Weaviate, Milvus), Large-Scale Dataset Handling.</li>
+      <li><strong>AI Deployment:</strong> MLOps (Azure ML, AWS SageMaker), Model Serving (REST APIs, gRPC), Model Optimization (Quantization, Pruning, TensorRT).</li>
+    </ul>
+    <ul>
+      <li><strong>Programming Languages:</strong> Python (Primary), Java, C#, C.</li>
+      <li><strong>Cloud & DevOps:</strong> Azure, AWS, Docker, Kubernetes, CI/CD (Azure DevOps, Jenkins), Serverless (AWS Lambda, Azure Functions).</li>
+      <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, NoSQL, Vector Stores.</li>
+      <li><strong>Big Data & Processing:</strong> Kafka, Spark, Databricks, AWS Athena, Kinesis, Redshift.</li>
+    </ul>
+  </div>
+</section>
+
+     <!-- Research -->
+    <section id="research" class="card">
+      <h2>Research &amp; Publications</h2>
+      <ul class="bullets">
+        <li>AAAI-36: Code Representation Learning with Prüfer Sequences</li>
+        <li>IATS: Digitization of Tibetan Text — Deep Learning &amp; Security Implications</li>
+        <li>UBC Thesis: <a href="https://open.library.ubc.ca/collections/ubctheses/24/items/1.0402946" target="_blank" rel="noopener">Code representation learning with Prüfer sequences</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Open to collaborations with SMEs, startups, and public-sector teams building responsible AI systems.</p>
+      <ul class="plain">
+        <li>✉️ <a href="mailto:tenzinjinpa2024@gmail.com">tenzinjinpa2024@gmail.com</a></li>
+        <li>📞 437-299-7829</li>
+        <li>🔗 <a href="https://ca.linkedin.com/in/tenzin-jinpa-6a858979" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Tenzin Jinpa • AI &amp; Software R&amp;D • Hosted on GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') { root.classList.remove('light'); root.classList.add('dark'); btn.textContent = '🌙'; }
+      else { root.classList.remove('dark'); root.classList.add('light'); btn.textContent = '☀️'; }
+      btn.addEventListener('click', () => {
+        const isDark = root.classList.toggle('dark');
+        root.classList.toggle('light', !isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        btn.textContent = isDark ? '🌙' : '☀️';
+      });
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
